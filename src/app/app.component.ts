@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Card } from './models/card.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-flashcards';
+
+  flashcard: Card = {
+    id: 1,
+    question: 'What is the capital of France?',
+    answer: 'Paris',
+    category: 'Geography'
+  };
 }

@@ -1,0 +1,15 @@
+<h2>Flashcard</h2>
+
+<div class="flip-card" (click)="toggleFlip()">
+    <div class="flip-card-inner" [class.flipped]="isFlipped">
+        <div class="flip-card-front">
+            <p>{{ card.question }}</p>
+            <button (click)="toggleFlip()">Show Answer</button>
+        </div>
+        <div class="flip-card-back">
+            <p>{{ card.answer }}</p>
+            <button (click)="toggleFlip()">Show Question</button>
+        </div>
+    </div>
+</div>
+<p>Category: {{ card.category }}</p>
