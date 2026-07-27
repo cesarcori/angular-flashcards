@@ -1,2 +1,18 @@
 [tools]
 node = "16"
+
+[env]
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[tasks.dev]
+description = "Start Angular 13 dev server"
+run = "ng serve --open"
+
+[tasks.build]
+description = "Build Angular 13 production bundle"
+run = "ng build"
+
+[tasks.test]
+description = "Run unit tests"
+run = "ng test"
+
