@@ -9,7 +9,7 @@ import { Card } from './models/card.model';
 export class AppComponent {
   title = 'angular-flashcards';
 
-  flashcard: Card = {
+  mockCard: Card = {
     id: 1,
     question: 'What is the capital of France?',
     answer: 'Paris',
