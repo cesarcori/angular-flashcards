@@ -1,5 +1,28 @@
-<h1>Flashcards with Angular 13</h1>
+<!-- Top Navigation Toolbar -->
+<mat-toolbar color="primary" class="app-toolbar">
+    <span>Flashcards with Angular 13</span>
+</mat-toolbar>
 
-<app-flashcard [card]="flashcard"></app-flashcard>
+<!-- Main Container -->
+<main class="container">
+    <mat-card class="flashcard">
 
-<router-outlet></router-outlet>
+        <!-- Category Badge -->
+        <mat-card-subtitle>
+            <mat-chip-list>
+                <mat-chip color="accent" selected>Geography</mat-chip>
+            </mat-chip-list>
+        </mat-card-subtitle>
+
+        <!-- Flashcard Question -->
+        <mat-card-content class="card-content">
+            <h2 class="question-text">What is the capital of France?</h2>
+        </mat-card-content>
+
+        <!-- Action Button -->
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary">Show Answer</button>
+        </mat-card-actions>
+
+    </mat-card>
+</main>
