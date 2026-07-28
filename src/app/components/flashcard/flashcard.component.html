@@ -1,4 +1,4 @@
-<div class="flip-card" (click)="toggleFlip()">
+<!-- <div class="flip-card" (click)="toggleFlip()">
     <div class="flip-card-inner" [class.flipped]="isFlipped">
         <div class="flip-card-front">
             <p>{{ card.question }}</p>
@@ -10,4 +10,54 @@
         </div>
     </div>
 </div>
-<p>Category: {{ card.category }}</p>
+<p>Category: {{ card.category }}</p> -->
+<div class="card-wrapper">
+    <!-- Flip Card Container -->
+    <div class="flip-card" (click)="toggleFlip()">
+        <div class="flip-card-inner" [class.flipped]="isFlipped">
+
+            <!-- FRONT SIDE -->
+            <mat-card class="flip-card-front">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                        <mat-chip-list>
+                            <mat-chip color="accent" selected>{{ card.category }}</mat-chip>
+                        </mat-chip-list>
+                    </mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content class="card-content">
+                    <p class="card-text">{{ card.question }}</p>
+                </mat-card-content>
+
+                <mat-card-actions align="end">
+                    <button mat-raised-button color="primary" (click)="$event.stopPropagation(); toggleFlip()">
+                        Show Answer
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+
+            <!-- BACK SIDE -->
+            <mat-card class="flip-card-back">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                        <mat-chip-list>
+                            <mat-chip color="accent" selected>{{ card.category }}</mat-chip>
+                        </mat-chip-list>
+                    </mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content class="card-content">
+                    <p class="card-text answer-text">{{ card.answer }}</p>
+                </mat-card-content>
+
+                <mat-card-actions align="end">
+                    <button mat-stroked-button color="primary" (click)="$event.stopPropagation(); toggleFlip()">
+                        Show Question
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
