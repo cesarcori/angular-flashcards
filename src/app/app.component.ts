@@ -40,4 +40,7 @@ export class AppComponent {
 
   currentCard = getRandomElement(this.mockCards);
 
+  nextCard() {
+    this.currentCard = getRandomElement(this.mockCards);
+  }
 }

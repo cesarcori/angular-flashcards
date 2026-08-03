@@ -7,7 +7,7 @@
 
 
 <main class="container">
-    <app-flashcard [card]="currentCard!"></app-flashcard>
+    <app-flashcard [card]="currentCard!" (onNextCard)="nextCard()"></app-flashcard>
 
     <!-- <mat-card class="flashcard">
 

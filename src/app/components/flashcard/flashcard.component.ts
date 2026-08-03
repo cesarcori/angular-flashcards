@@ -8,7 +8,7 @@ import { Card } from 'src/app/models/card.model';
 })
 export class FlashcardComponent {
   @Input() card!: Card;
-  @Output() nextCard = new EventEmitter<void>();
+  @Output() onNextCard = new EventEmitter<void>();
 
   isFlipped: boolean = false;
 
@@ -16,8 +16,9 @@ export class FlashcardComponent {
     this.isFlipped = !this.isFlipped;
   }
 
-  reloadPage(): void {
-    window.location.reload();
+  triggerNextCard() {
+    this.onNextCard.emit();
+    this.isFlipped = true;
   }
 
 }
