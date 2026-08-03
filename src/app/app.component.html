@@ -7,27 +7,9 @@
 
 
 <main class="container">
-    <app-flashcard [card]="currentCard!" (onNextCard)="nextCard()"></app-flashcard>
+    <app-flashcard [card]="currentCard!"></app-flashcard>
 
-    <button mat-raised-button color="basic" (click)="nextCard()">
+    <button mat-stroked-button color="primary" (click)="nextCard()">
         Next Card
     </button>
-
-    <!-- <mat-card class="flashcard">
-
-        <mat-card-subtitle>
-            <mat-chip-list>
-                <mat-chip color="accent" selected>Geography</mat-chip>
-            </mat-chip-list>
-        </mat-card-subtitle>
-
-        <mat-card-content class="card-content">
-            <h2 class="question-text">What is the capital of France?</h2>
-        </mat-card-content>
-
-        <mat-card-actions align="end">
-            <button mat-raised-button color="primary">Show Answer</button>
-        </mat-card-actions>
-
-    </mat-card> -->
 </main>
