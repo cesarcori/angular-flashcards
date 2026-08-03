@@ -9,6 +9,10 @@
 <main class="container">
     <app-flashcard [card]="currentCard!" (onNextCard)="nextCard()"></app-flashcard>
 
+    <button mat-raised-button color="basic" (click)="nextCard()">
+        Next Card
+    </button>
+
     <!-- <mat-card class="flashcard">
 
         <mat-card-subtitle>

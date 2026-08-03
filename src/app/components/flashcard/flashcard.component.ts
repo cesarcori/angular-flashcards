@@ -16,9 +16,4 @@ export class FlashcardComponent {
     this.isFlipped = !this.isFlipped;
   }
 
-  triggerNextCard() {
-    this.onNextCard.emit();
-    this.isFlipped = true;
-  }
-
 }
