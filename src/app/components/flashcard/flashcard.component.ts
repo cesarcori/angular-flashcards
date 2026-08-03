@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Card } from 'src/app/models/card.model';
 
 @Component({
@@ -8,9 +8,16 @@ import { Card } from 'src/app/models/card.model';
 })
 export class FlashcardComponent {
   @Input() card!: Card;
+  @Output() nextCard = new EventEmitter<void>();
+
   isFlipped: boolean = false;
 
   toggleFlip() {
     this.isFlipped = !this.isFlipped;
   }
+
+  reloadPage(): void {
+    window.location.reload();
+  }
+
 }
