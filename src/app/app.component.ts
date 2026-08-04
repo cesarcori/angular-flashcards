@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
     // 2. Select the first category if available
     if (this.categories.length > 0) {
-      this.selectCategory(this.categories[1]);
+      this.selectCategory(this.categories[0]);
     }
   }
 

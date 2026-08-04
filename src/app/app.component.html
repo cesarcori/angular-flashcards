@@ -7,12 +7,14 @@
 
 
 <main class="container">
-    <mat-radio-group aria-label="Select an option">
-        <mat-radio-button *ngFor="let category of categories" [value]="category"
-            [checked]="category === selectedCategory" (change)="selectCategory(category)">
+    <!-- Category Chips -->
+    <mat-chip-list aria-label="Select category" class="category-chips">
+        <mat-chip *ngFor="let category of categories" [selected]="category === selectedCategory"
+            (click)="selectCategory(category)" color="accent">
             {{ category }}
-        </mat-radio-button>
-    </mat-radio-group>
+        </mat-chip>
+    </mat-chip-list>
+
     <app-flashcard [card]="currentCard!"></app-flashcard>
 
     <button mat-fab color="primary" matTooltip="Next Card" (click)="nextCard()">

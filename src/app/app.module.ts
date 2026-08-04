@@ -11,7 +11,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatChipsModule,
     MatIconModule,
-    MatTooltipModule,
-    MatRadioModule
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
