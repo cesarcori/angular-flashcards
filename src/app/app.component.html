@@ -7,6 +7,12 @@
 
 
 <main class="container">
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button *ngFor="let category of categories" [value]="category"
+            [checked]="category === selectedCategory" (change)="selectCategory(category)">
+            {{ category }}
+        </mat-radio-button>
+    </mat-radio-group>
     <app-flashcard [card]="currentCard!"></app-flashcard>
 
     <button mat-fab color="primary" matTooltip="Next Card" (click)="nextCard()">
