@@ -1,26 +1,5 @@
 import { Component } from '@angular/core';
-import { Card } from './models/card.model';
-
-const MOCK_CARDS: readonly Card[] = [
-  {
-    id: 1,
-    question: 'What is the capital of France?',
-    answer: 'Paris',
-    category: 'Geography'
-  },
-  {
-    id: 2,
-    question: 'What is the capital of Spain?',
-    answer: 'Madrid',
-    category: 'Geography'
-  },
-  {
-    id: 3,
-    question: 'What is the capital of Germany?',
-    answer: 'Berlin',
-    category: 'Geography'
-  }
-];
+import { MOCK_CARDS } from './models/mock-cards';
 
 function getRandomElement<T>(items: readonly T[]): T | null {
   if (items.length === 0) return null;
